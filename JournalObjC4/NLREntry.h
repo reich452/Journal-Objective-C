@@ -10,9 +10,10 @@
 
 @interface NLREntry : NSObject
 
-@property (nonatomic, copy)NSString* title;
-@property (nonatomic, copy)NSString* bodyText;
+@property (nonatomic, strong)NSString* title;
+@property (nonatomic, strong)NSString* bodyText;
+@property (nonatomic, strong)NSDate* timestamp;
 
--(instancetype)initWithTitle:(NSString *)title bodyText:(NSString *)bodyText;
+-(instancetype)initWithTitle:(NSString *)title bodyText:(NSString *)bodyText timestamp: (NSDate *)timestamp;
 
 @end

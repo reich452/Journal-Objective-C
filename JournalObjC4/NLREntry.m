@@ -10,10 +10,17 @@
 
 @implementation NLREntry
 
-- (instancetype)initWithTitle:(NSString *)title bodyText:(NSString *)bodyText
 
+// Initializer memberize. 
+- (instancetype)initWithTitle:(NSString *)title bodyText:(NSString *)bodyText timestamp:(NSDate *)timestamp
 {
-    
+    self = [super init];
+    if (self) {
+        _title = title;
+        _bodyText = bodyText;
+        _timestamp = timestamp;
+    }
+    return self; 
 }
 
 @end
